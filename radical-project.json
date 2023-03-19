@@ -1,0 +1,91 @@
+{
+	"version": 2,
+	"models": {
+		"Employee": {
+			"title": "Employee",
+			"properties": {
+				"employeeId": {
+					"type": "string",
+					"addedTime": 1677933304572
+				},
+				"name": {
+					"type": "string",
+					"addedTime": 1677933305912
+				}
+			},
+			"$id": "https://radical.sh/testpost/models/Employee",
+			"key": "employeeId"
+		}
+	},
+	"actions": {
+		"models": {
+			"Employee": {
+				"actions": {
+					"Create": {
+						"enabled": true,
+						"apiEnabled": true,
+						"actionType": "async",
+						"parameters": {}
+					},
+					"Update": {
+						"enabled": true,
+						"apiEnabled": true,
+						"actionType": "async",
+						"parameters": {},
+						"path": "/{employeeId}"
+					},
+					"Get": {
+						"enabled": true,
+						"apiEnabled": true,
+						"actionType": "sync",
+						"parameters": {},
+						"path": "/{employeeId}"
+					},
+					"Delete": {
+						"enabled": true,
+						"apiEnabled": true,
+						"actionType": "async",
+						"parameters": {},
+						"path": "/{employeeId}"
+					}
+				},
+				"path": "employees"
+			}
+		}
+	},
+	"project": {
+		"path": "/v1/",
+		"groupName": "sh.radical",
+		"build": {
+			"tool": "gradle"
+		},
+		"logger": {
+			"appenderConfig": {
+				"consoleAppender": {
+					"enabled": true
+				},
+				"fileAppender": {
+					"enabled": true
+				}
+			}
+		},
+		"health": {
+			"dependenciesHealthEnabled": true,
+			"enabled": true
+		},
+		"unitTests": {
+			"enabled": true
+		},
+		"packageName": "sh.radical.testpost",
+		"projectName": "testpost",
+		"version": {
+			"org.springframework.boot": "2.6.0"
+		},
+		"swagger": {
+			"enabled": true
+		}
+	},
+	"config": {
+		"customProperties": ""
+	}
+}
